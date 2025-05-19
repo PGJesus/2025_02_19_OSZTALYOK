@@ -1,25 +1,23 @@
 class Student:
-    name = ""
-    age = 0
-    sex = ""
-    score = 0
+
+    def __init__(self, name, sex, age = 0):
+        self.name = name
+        self.age = age
+        self.sex = sex
+        self.score = 10
 
     def introduce(self):
-        print(f"Név: {self.name}, Kor: {self.age}, Pontszám: {self.score}")
+        print(f"Név: {self.name}, Kor: {self.age}, Pontszám: {self.score} ")
 
     def learn(self, points):
         self.score += points 
 
 
-tivadar = Student()
-# print(tivadar)
+tivadar = Student("El Tivadar", 16, "male")
+leila = Student("Los Leila", "female")
 
-tivadar.name = "El Tivadar"
-tivadar.age = 16
-tivadar.sex = "male"
-tivadar.score = 20
-
-# print(f"Név: {tivadar.name}, Kor: {tivadar.age}, Pontszám: {tivadar.score}")
 tivadar.introduce()
 tivadar.learn(12)
 tivadar.introduce()
+
+leila.introduce()
